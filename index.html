@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo | Login</title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+
+    <!-- daisy ui cmd -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awasome cmd -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google font cmd -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- style lekhbo -->
+
+    <style>
+        * {
+            font-family: "Outfit", sans-serif;
+        }
+    </style>
+
+
+
+
+</head>
+
+<body class="max-w-md min-h-screen bg-base-200 mx-auto">
+
+    <header class="flex flex-col justify-center h-[100vh]">
+        <div class="logo max-w-[200px] mx-auto "><img src="assets/Logo-full.png" alt=""></div>
+
+
+        <search class="form mt-10">
+            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow mx-auto rounded-2xl">
+                <div class="card-body">
+                    <fieldset class="fieldset">
+                        <label class="label text-neutral font-medium text-[16px]">Mobile Number</label>
+
+                        <input id="input-number" minlength="11" maxlength="11" type="number"
+                            class="input bg-base-200 rounded-full text-[16px] outline-0 border-0 py-5 pr-10"
+                            placeholder="Enter your phone number" value="01" />
+                        <label class="label text-neutral font-medium text-[16px] mt-3">Password</label>
+
+                        <input id="input-password" minlength="4" maxlength="4" type="password"
+                            class="input bg-base-200 rounded-full text-[16px] outline-0 border-0 py-5"
+                            placeholder="Password" />
+
+                        <button id="login-btn" class="btn btn-neutral mt-4 rounded-full bg-primary py-5">Login</button>
+                    </fieldset>
+                </div>
+            </div>
+        </search>
+    </header>
+    <script>
+
+    </script>
+
+    <script src="script/login.js"></script>
+</body>
+
+</html>

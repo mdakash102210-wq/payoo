@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo | Home</title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+
+    <!-- daisy ui cmd -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awasome cmd -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google font cmd -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- style lekhbo -->
+
+    <style>
+        * {
+            font-family: "Outfit", sans-serif;
+        }
+    </style>
+
+
+
+
+</head>
+
+<body class="max-w-md min-h-screen bg-base-200 mx-auto ">
+    <header class="py-7">
+        <nav class="flex justify-between items-center max-w-11/12 py-3 m-auto border-b-2">
+            <div class="img flex justify-center items-center">
+                <div class="img max-w-[60px]">
+                    <img src="assets/logo.png" alt="">
+                </div>
+                <div class="balance">
+                    <h1 class="text-xl font-bold">$ <span>45000</span></h1>
+                    <p class="text-neutral/50">Available Balance</p>
+
+                </div>
+            </div>
+            <div class="log-out">
+                <a href="index.html" class="btn-outline btn text-neutral/50"><i
+                        class="rotate-[180deg] fa-solid fa-arrow-right-from-bracket"></i> <span>Log
+                        Out</span></a>
+            </div>
+        </nav>
+    </header>
+    <section class="baner max-w-11/12 m-auto mt-3 ">
+        <h1 class="text-2xl font-bold capitalize"> Wellcome to pay<span class="text-primary/60 lowercase">oo</span>
+        </h1>
+        <p class="text-neutral/50 leading-6 mt-2">Enjoy easy and convenient financial services with us. Casho charge is
+            low and</p>
+    </section>
+    <section class="button my-10 grid grid-cols-3 gap-4 max-w-11/12 m-auto ">
+        <div class="btn btn-primary  btn-soft flex-col h-full py-2 rounded-xl">
+            <img src=" assets/opt-1.png" alt="">
+            <p>Add Money</p>
+        </div>
+        <div class="btn btn-primary  btn-soft flex-col h-full py-2 rounded-xl">
+            <img src=" assets/opt-2.png" alt="">
+            <p>Cashout</p>
+        </div>
+        <div class="btn btn-primary  btn-soft flex-col h-full py-2 rounded-xl">
+            <img src=" assets/opt-3.png" alt="">
+            <p>Transfer Money</p>
+        </div>
+        <div class="btn btn-primary  btn-soft flex-col h-full py-2 rounded-xl">
+            <img src=" assets/opt-4.png" alt="">
+            <p>Get Bonus</p>
+        </div>
+        <div class="btn btn-primary  btn-soft flex-col h-full py-2 rounded-xl">
+            <img src=" assets/opt-5.png" alt="">
+            <p>Pay Bill</p>
+        </div>
+        <div class="btn btn-primary  btn-soft flex-col h-full py-3 rounded-xl">
+            <img src=" assets/opt-6.png" alt="">
+            <p>Transactions</p>
+        </div>
+
+    </section>
+
+    <section id="cash-out" class=" max-w-11/12 m-auto mt-5 pb-10 ">
+        <h1 class="text-2xl font-bold mb-3">Cash Out</h1>
+
+
+        <div class="card bg-base-100 w-full   shadow  rounded-2xl">
+            <div class="card-body">
+                <fieldset class="fieldset">
+                    <label class="label text-neutral font-medium text-[16px]">Agent Number</label>
+
+                    <input id="cashout-number" minlength="11" maxlength="11" type="number"
+                        class="input bg-base-200 rounded-full text-[16px] outline-0 border-0 py-5 pr-10 w-full"
+                        placeholder="Enter Your Agent Number" />
+                    <label class="label text-neutral font-medium text-[16px] mt-3">Amount</label>
+
+                    <input id="cashout-amount" minlength="4" maxlength="4" type="number"
+                        class="input bg-base-200 rounded-full text-[16px] outline-0 border-0 py-5 w-full"
+                        placeholder="Enter Amount To Withdrow" />
+
+                    <label class="label text-neutral font-medium text-[16px] mt-3">Pin</label>
+
+                    <input id="input-pin" minlength="4" maxlength="4" type="password"
+                        class="input bg-base-200 rounded-full text-[16px] outline-0 border-0 py-5 w-full"
+                        placeholder="Inter Your" />
+
+                    <button id="withdrow-btn" class="btn btn-neutral mt-4 rounded-full bg-primary py-5">Withdraw
+                        Money</button>
+                </fieldset>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+</body>
+
+</html>
