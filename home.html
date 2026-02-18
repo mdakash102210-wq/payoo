@@ -41,7 +41,7 @@
                     <img src="assets/logo.png" alt="">
                 </div>
                 <div class="balance">
-                    <h1 class="text-xl font-bold">$ <span>45000</span></h1>
+                    <h1 class="text-xl font-bold">$ <span id="curent-amount">45000</span></h1>
                     <p class="text-neutral/50">Available Balance</p>
 
                 </div>
@@ -121,7 +121,65 @@
 
 
 
+    <script>
+        // button dorte hobe
+        let cashOutbtn = document.getElementById("withdrow-btn");
+        cashOutbtn.addEventListener('click', function () {
+            // number doro and validity chek
+            let agentnumber = document.getElementById("cashout-number").value;
+            if (agentnumber.length !== 11) {
+                alert("Invalid Number")
+                return
+            }
+            // 2 amount chek and validaty chek
 
+            let cashoutAmount = document.getElementById("cashout-amount").value;
+
+            //3/ curent amount chek
+            let currentAmount = document.getElementById("curent-amount");
+
+            let CurrentAmount = currentAmount.innerText;
+
+            //4 new amount chek
+            let newAmount = parseInt(CurrentAmount) - parseInt(cashoutAmount)
+
+
+
+
+            let pin = document.getElementById("input-pin").value;
+            if (pin !== "1234") {
+                alert("Invalid Pin")
+                return
+            }
+            if (parseInt(CurrentAmount) >= parseInt(cashoutAmount) & parseInt(cashoutAmount) > 0) {
+                alert("Withdrow Successful")
+                currentAmount.innerText = newAmount;
+            } else {
+                alert("Invalid Amount")
+                return
+            }
+
+
+
+
+
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+        // 5 pin chek and validate chek
+        // sobkisu sothik hole alert
+        // bul hole alert 
+    </script>
 </body>
 
 </html>
