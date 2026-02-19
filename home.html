@@ -87,7 +87,45 @@
 
     </section>
 
-    <section id="cash-out" class=" max-w-11/12 m-auto mt-5 pb-10 ">
+    <section id="add-money" class=" max-w-11/12 m-auto mt-5 pb-10 ">
+        <h1 class="text-2xl font-bold mb-3">Add Money</h1>
+
+
+        <div class="card bg-base-100 w-full   shadow  rounded-2xl">
+            <div class="card-body">
+                <fieldset class="fieldset">
+                    <label class="label text-neutral font-medium text-[16px]">Select A Bank</label>
+                    <select id="select-bank"
+                        class=" select text-[16px]  select-accent w-full bg-base-200 rounded-full mb-3 outline-0 border-0">
+                        <option selected disabled>Select Your Bank</option>
+                        <option value="ibbl">IBBL</option>
+                        <option value="islami">ISLAMI BANK</option>
+                        <option value="prime">PRIME BANk</option>
+                    </select>
+
+
+                    <label class="label text-neutral font-medium text-[16px]">Bank Account Number</label>
+                    <input id="add-acount-number" minlength="11" maxlength="11" type="number"
+                        class="input bg-base-200 rounded-full text-[16px] outline-0 border-0 py-5 pr-10 w-full"
+                        placeholder="Enter 11 digit account number" value="01815582214" />
+
+                    <label class="label text-neutral font-medium text-[16px] mt-3">Amount to Add</label>
+                    <input id="add-to-amount" minlength="4" maxlength="4" type="number"
+                        class="input bg-base-200 rounded-full text-[16px] outline-0 border-0 py-5 w-full"
+                        placeholder="Enter Amount To Withdrow" />
+
+                    <label class="label text-neutral font-medium text-[16px] mt-3">Pin Number</label>
+                    <input id="add-pin-number" minlength="4" maxlength="4" type="password"
+                        class="input bg-base-200 rounded-full text-[16px] outline-0 border-0 py-5 w-full"
+                        placeholder="Enter 4 digit pin number" />
+
+                    <button id="add-mony-btn" class="btn btn-neutral mt-4 rounded-full bg-primary py-5">Add
+                        Money</button>
+                </fieldset>
+            </div>
+        </div>
+    </section>
+    <section id="cash-out" class=" hidden max-w-11/12 m-auto mt-5 pb-10 ">
         <h1 class="text-2xl font-bold mb-3">Cash Out</h1>
 
 
@@ -98,7 +136,7 @@
 
                     <input id="cashout-number" minlength="11" maxlength="11" type="number"
                         class="input bg-base-200 rounded-full text-[16px] outline-0 border-0 py-5 pr-10 w-full"
-                        placeholder="Enter Your Agent Number" />
+                        placeholder="Enter Your 17 Digit Agent Number" />
                     <label class="label text-neutral font-medium text-[16px] mt-3">Amount</label>
 
                     <input id="cashout-amount" minlength="4" maxlength="4" type="number"
@@ -109,7 +147,7 @@
 
                     <input id="input-pin" minlength="4" maxlength="4" type="password"
                         class="input bg-base-200 rounded-full text-[16px] outline-0 border-0 py-5 w-full"
-                        placeholder="Inter Your" />
+                        placeholder="Inter Your Pin" />
 
                     <button id="withdrow-btn" class="btn btn-neutral mt-4 rounded-full bg-primary py-5">Withdraw
                         Money</button>
@@ -119,67 +157,14 @@
 
     </section>
 
-
+    <script src="script/maching.js"></script>
+    <script src="script/cashout.js"></script>
+    <script src="script/addmony.js"></script>
 
     <script>
-        // button dorte hobe
-        let cashOutbtn = document.getElementById("withdrow-btn");
-        cashOutbtn.addEventListener('click', function () {
-            // number doro and validity chek
-            let agentnumber = document.getElementById("cashout-number").value;
-            if (agentnumber.length !== 11) {
-                alert("Invalid Number")
-                return
-            }
-            // 2 amount chek and validaty chek
 
-            let cashoutAmount = document.getElementById("cashout-amount").value;
-
-            //3/ curent amount chek
-            let currentAmount = document.getElementById("curent-amount");
-
-            let CurrentAmount = currentAmount.innerText;
-
-            //4 new amount chek
-            let newAmount = parseInt(CurrentAmount) - parseInt(cashoutAmount)
-
-
-
-
-            let pin = document.getElementById("input-pin").value;
-            if (pin !== "1234") {
-                alert("Invalid Pin")
-                return
-            }
-            if (parseInt(CurrentAmount) >= parseInt(cashoutAmount) & parseInt(cashoutAmount) > 0) {
-                alert("Withdrow Successful")
-                currentAmount.innerText = newAmount;
-            } else {
-                alert("Invalid Amount")
-                return
-            }
-
-
-
-
-
-        })
-
-
-
-
-
-
-
-
-
-
-
-
-        // 5 pin chek and validate chek
-        // sobkisu sothik hole alert
-        // bul hole alert 
     </script>
+
 </body>
 
 </html>
